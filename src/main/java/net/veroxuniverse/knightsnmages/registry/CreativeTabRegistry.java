@@ -18,7 +18,7 @@ public class CreativeTabRegistry {
             KnightsnMages.MOD_ID,
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + KnightsnMages.MOD_ID))
-                    .icon(() -> new ItemStack(com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry.MAGE_FIBER.get()))
+                    .icon(() -> new ItemStack(ItemsRegistry.ELITE_SOURCE_GEM.get()))
                     .displayItems((displayParameters, output) -> {
                         for (RegistryObject<Item> item : ItemsRegistry.ITEMS.getEntries())
                             output.accept(item.get());

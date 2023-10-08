@@ -27,9 +27,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.veroxuniverse.knightsnmages.registry.BlocksRegistry;
 import net.veroxuniverse.knightsnmages.registry.CreativeTabRegistry;
 import net.veroxuniverse.knightsnmages.registry.ItemsRegistry;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
+
 @Mod(KnightsnMages.MOD_ID)
 public class KnightsnMages
 {
@@ -41,7 +44,9 @@ public class KnightsnMages
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        GeckoLib.initialize();
         ItemsRegistry.register(modEventBus);
+        BlocksRegistry.register(modEventBus);
         CreativeTabRegistry.register(modEventBus);
         //* LOOT MODIFIERS *//
         //ModLootModifiers.register(modEventBus);

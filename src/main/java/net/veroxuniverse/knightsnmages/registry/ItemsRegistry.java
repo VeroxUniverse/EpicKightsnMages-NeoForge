@@ -4,9 +4,9 @@ import com.hollingsworth.arsnouveau.api.perk.ArmorPerkHolder;
 import com.hollingsworth.arsnouveau.api.perk.PerkSlot;
 import com.hollingsworth.arsnouveau.api.registry.PerkRegistry;
 import com.hollingsworth.arsnouveau.common.armor.AnimatedMagicArmor;
-import com.hollingsworth.arsnouveau.common.armor.Materials;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,6 +21,35 @@ import java.util.List;
 public class ItemsRegistry {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, KnightsnMages.MOD_ID);
+
+    //* ITEMS *//
+
+    public static final RegistryObject<Item> ELITE_MAGEBLOOM = ITEMS.register("elite_magebloom",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ELITE_MAGEBLOOM_FIBER = ITEMS.register("elite_magebloom_fiber",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ELITE_MAGEBLOOM_SEED = ITEMS.register("elite_magebloom_seed",
+            () -> new ItemNameBlockItem(BlocksRegistry.ELITE_MAGEBLOOM_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> ELITE_SOURCE_GEM = ITEMS.register("elite_source_gem",
+            () -> new Item(new Item.Properties()));
+
+
+    //* ARMOR ITEMS *//
+
+    public static GeoModel<AnimatedMagicArmor> model;
+    public static final RegistryObject<Item> ELITE_MAGE_HELMET = ITEMS.register("elite_mage_helmet",
+            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.HELMET, new Item.Properties(), model));
+    public static final RegistryObject<Item> ELITE_MAGE_CHESTPLATE = ITEMS.register("elite_mage_chestplate",
+            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.CHESTPLATE, new Item.Properties(), model));
+
+    public static final RegistryObject<Item> ELITE_MAGE_LEGGINGS = ITEMS.register("elite_mage_leggings",
+            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.LEGGINGS, new Item.Properties(), model));
+    public static final RegistryObject<Item> ELITE_MAGE_BOOTS = ITEMS.register("elite_mage_boots",
+            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.BOOTS, new Item.Properties(), model));
+
 
     //* PERK PROVIDERS *//
 
@@ -46,22 +75,6 @@ public class ItemsRegistry {
                 Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.TWO)
         )));
     }
-
-    //* ITEMS *//
-
-    //* ARMOR ITEMS *//
-
-    public static GeoModel<AnimatedMagicArmor> model;
-    public static final RegistryObject<Item> ELITE_MAGE_HELMET = ITEMS.register("elite_mage_helmet",
-            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.HELMET, new Item.Properties(), model));
-    public static final RegistryObject<Item> ELITE_MAGE_CHESTPLATE = ITEMS.register("elite_mage_chestplate",
-            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.CHESTPLATE, new Item.Properties(), model));
-
-    public static final RegistryObject<Item> ELITE_MAGE_LEGGINGS = ITEMS.register("elite_mage_leggings",
-            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.LEGGINGS, new Item.Properties(), model));
-    public static final RegistryObject<Item> ELITE_MAGE_BOOTS = ITEMS.register("elite_mage_boots",
-            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.BOOTS, new Item.Properties(), model));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

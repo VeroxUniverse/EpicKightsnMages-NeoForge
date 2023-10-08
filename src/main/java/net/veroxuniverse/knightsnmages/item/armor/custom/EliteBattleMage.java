@@ -21,7 +21,9 @@ import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.Animation;
 import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.model.GeoModel;
 
@@ -55,7 +57,7 @@ public class EliteBattleMage extends KNMArmorItem {
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, 20, state -> {
-            state.setAnimation(DefaultAnimations.IDLE);
+            state.setAnimation(RawAnimation.begin().then("animation.elite_mage.idle", Animation.LoopType.LOOP));
 
             Entity entity = state.getData(DataTickets.ENTITY);
 
@@ -79,12 +81,12 @@ public class EliteBattleMage extends KNMArmorItem {
             return isFullSet ? PlayState.CONTINUE : PlayState.STOP;
         }));
     }
-/*
+
 
     @Override
     public @Nullable String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        return new ResourceLocation(KnightsnMages.MOD_ID, "textures/models/armor/ars_nouveau/elite_mage_armor_textures_" + this.getColor(stack) + ".png").toString();
+        //return new ResourceLocation(KnightsnMages.MOD_ID, "textures/models/armor/ars_nouveau/elite_mage_armor_textures_" + this.getColor(stack) + ".png").toString();
+        return new ResourceLocation(KnightsnMages.MOD_ID, "textures/armor/elite_mage_armor_textures.png").toString();
     }
 
- */
 }

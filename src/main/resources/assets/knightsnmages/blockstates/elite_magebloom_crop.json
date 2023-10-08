@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "knightsnmages:block/elite_magebloom_stage0"
+    },
+    "age=1": {
+      "model": "knightsnmages:block/elite_magebloom_stage1"
+    },
+    "age=2": {
+      "model": "knightsnmages:block/elite_magebloom_stage1"
+    },
+    "age=3": {
+      "model": "knightsnmages:block/elite_magebloom_stage1"
+    },
+    "age=4": {
+      "model": "knightsnmages:block/elite_magebloom_stage2"
+    },
+    "age=5": {
+      "model": "knightsnmages:block/elite_magebloom_stage2"
+    },
+    "age=6": {
+      "model": "knightsnmages:block/elite_magebloom_stage2"
+    },
+    "age=7": {
+      "model": "knightsnmages:block/elite_magebloom_stage3"
+    }
+  }
+}

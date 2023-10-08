@@ -12,8 +12,8 @@ import java.util.function.Supplier;
 
 public class ArmorMaterialsRegistry {
 
-    public static final KNMArmorMaterial ELITE = new KNMArmorMaterial("an_elite", 38, new int[]{4, 7, 9, 4},
-            30, SoundEvents.ARMOR_EQUIP_LEATHER, 3.0f, () -> Ingredient.of(ItemsRegistry.MAGE_FIBER));
+    public static final KNMArmorMaterial ELITE = new KNMArmorMaterial("an_elite", 38, new int[]{3, 6, 8, 3},
+            30, SoundEvents.ARMOR_EQUIP_LEATHER, 3.0f, 0.1F, () -> Ingredient.of(ItemsRegistry.MAGE_FIBER));
 
     public static class KNMArmorMaterial implements ArmorMaterial {
 
@@ -23,18 +23,21 @@ public class ArmorMaterialsRegistry {
         private final int[] damageReductionAmountArray;
         private final int enchantability;
 
-        public KNMArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, Supplier<Ingredient> supplier) {
+        public KNMArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier<Ingredient> supplier) {
             this.name = name;
             this.maxDamageFactor = maxDamageFactor;
             this.damageReductionAmountArray = damageReductionAmountArray;
             this.enchantability = enchantability;
             this.soundEvent = soundEvent;
             this.toughness = toughness;
+            this.knockbackResistance = knockbackResistance;
             this.repairMaterial = new LazyLoadedValue<>(supplier);
         }
 
         private final SoundEvent soundEvent;
         private final float toughness;
+
+        private final float knockbackResistance;
         private final LazyLoadedValue<Ingredient> repairMaterial;
 
         @Override
@@ -74,7 +77,7 @@ public class ArmorMaterialsRegistry {
 
         @Override
         public float getKnockbackResistance() {
-            return 0;
+            return knockbackResistance;
         }
     }
 }

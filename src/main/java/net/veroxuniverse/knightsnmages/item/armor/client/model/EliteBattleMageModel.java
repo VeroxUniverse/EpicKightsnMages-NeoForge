@@ -14,13 +14,12 @@ public class EliteBattleMageModel extends GeoModel<EliteBattleMage> {
     @Override
     public ResourceLocation getTextureResource(EliteBattleMage object) {
         //return null;
-        return new ResourceLocation(KnightsnMages.MOD_ID, "textures/armor/elite_mage_armor_textures_purple.png");
+        return new ResourceLocation(KnightsnMages.MOD_ID, "textures/armor/elite_mage_armor_textures.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(EliteBattleMage animatable) {
-        return new ResourceLocation(KnightsnMages.MOD_ID, "animations/elite_mage_armor_animation.json");
+        return new ResourceLocation(KnightsnMages.MOD_ID, "animations/elite_mage_armor.animation.json");
     }
-
 
 }
