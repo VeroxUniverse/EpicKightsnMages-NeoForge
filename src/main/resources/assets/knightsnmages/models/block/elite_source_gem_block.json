@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "knightsnmages:block/elite_source_gem_block"
+  },
+  "render_type": "translucent"
+}

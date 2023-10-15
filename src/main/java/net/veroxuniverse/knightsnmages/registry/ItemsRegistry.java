@@ -4,6 +4,8 @@ import com.hollingsworth.arsnouveau.api.perk.ArmorPerkHolder;
 import com.hollingsworth.arsnouveau.api.perk.PerkSlot;
 import com.hollingsworth.arsnouveau.api.registry.PerkRegistry;
 import com.hollingsworth.arsnouveau.common.armor.AnimatedMagicArmor;
+import com.hollingsworth.arsnouveau.common.items.ModItem;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -12,9 +14,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.veroxuniverse.knightsnmages.KnightsnMages;
+import net.veroxuniverse.knightsnmages.item.KNMCropBlockItem;
 import net.veroxuniverse.knightsnmages.item.armor.custom.EliteBattleMage;
 import software.bernie.geckolib.model.GeoModel;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,15 +29,21 @@ public class ItemsRegistry {
     //* ITEMS *//
 
     public static final RegistryObject<Item> ELITE_MAGEBLOOM = ITEMS.register("elite_magebloom",
-            () -> new Item(new Item.Properties()));
+            () -> new ModItem(new Item.Properties()).withTooltip("knightsnmages.tooltip.elite_magebloom"));
 
     public static final RegistryObject<Item> ELITE_MAGEBLOOM_FIBER = ITEMS.register("elite_magebloom_fiber",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ELITE_MAGEBLOOM_SEED = ITEMS.register("elite_magebloom_seed",
-            () -> new ItemNameBlockItem(BlocksRegistry.ELITE_MAGEBLOOM_CROP.get(), new Item.Properties()));
+            () -> new KNMCropBlockItem(BlocksRegistry.ELITE_MAGEBLOOM_CROP.get(), new Item.Properties()).withTooltip("knightsnmages.tooltip.elite_magebloom_seed"));
 
     public static final RegistryObject<Item> ELITE_SOURCE_GEM = ITEMS.register("elite_source_gem",
+            () -> new ModItem(new Item.Properties()).withTooltip("knightsnmages.tooltip.elite_source_gem"));
+
+    public static final RegistryObject<Item> SCARLET_GEM = ITEMS.register("scarlet_gem",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CITRIN_GEM = ITEMS.register("citrin_gem",
             () -> new Item(new Item.Properties()));
 
 

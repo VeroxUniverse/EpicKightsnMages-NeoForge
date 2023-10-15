@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "knightsnmages:elite_magebloom"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "knightsnmages:elite_magebloom_fiber"
+  }
+}

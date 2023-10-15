@@ -1,8 +1,13 @@
 {
   "type": "minecraft:block",
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ],
   "pools": [
     {
-      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -11,8 +16,8 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "condition": "minecraft:block_state_property",
                   "block": "knightsnmages:elite_magebloom_crop",
+                  "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "7"
                   }
@@ -22,45 +27,43 @@
             },
             {
               "type": "minecraft:item",
-              "name": "knightsnmages:elite_magebloom_crop"
+              "name": "knightsnmages:elite_magebloom_seed"
             }
           ]
         }
-      ]
+      ],
+      "rolls": 1.0
     },
     {
-      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "knightsnmages:elite_magebloom_crop",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "age": "7"
+          }
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
           "functions": [
             {
-              "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
               "formula": "minecraft:binomial_with_bonus_count",
+              "function": "minecraft:apply_bonus",
               "parameters": {
                 "extra": 0,
                 "probability": 0.5714286
               }
             }
           ],
-          "name": "knightsnmages:elite_magebloom_crop"
+          "name": "knightsnmages:elite_magebloom_seed"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "knightsnmages:elite_magebloom_crop",
-          "properties": {
-            "age": "7"
-          }
-        }
-      ]
+      "rolls": 1.0
     }
   ],
-  "functions": [
-    {
-      "function": "minecraft:explosion_decay"
-    }
-  ]
+  "random_sequence": "knightsnmages:blocks/elite_magebloom_crop"
 }

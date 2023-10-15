@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "knightsnmages:block/deepslate_scarlet_ore"
+  }
+}

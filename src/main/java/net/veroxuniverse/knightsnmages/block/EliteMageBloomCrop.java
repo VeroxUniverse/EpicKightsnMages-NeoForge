@@ -5,11 +5,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.veroxuniverse.knightsnmages.registry.BlocksRegistry;
@@ -32,5 +29,8 @@ public class EliteMageBloomCrop extends CropBlock {
         return BlocksRegistry.ELITE_MAGEBLOOM_CROP.get();
     }
 
+    protected IntegerProperty getAgeProperty() {
+        return AGE;
+    }
 
 }

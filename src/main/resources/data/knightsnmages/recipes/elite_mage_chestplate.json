@@ -1,0 +1,27 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
+  "output": {
+    "item": "knightsnmages:elite_mage_chestplate"
+  },
+  "pedestalItems": [
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "minecraft:netherite_chestplate"
+    }
+  ],
+  "sourceCost": 2500
+}

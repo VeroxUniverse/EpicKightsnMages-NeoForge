@@ -1,0 +1,27 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "output": {
+    "item": "knightsnmages:elite_magebloom_seed"
+  },
+  "pedestalItems": [
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "ars_nouveauu:magebloom_crop"
+    }
+  ],
+  "sourceCost": 0
+}

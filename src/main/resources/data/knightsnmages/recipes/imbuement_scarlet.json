@@ -1,0 +1,10 @@
+{
+  "type": "ars_nouveau:imbuement",
+  "count": 1,
+  "input": {
+    "tag": "forge:gems/scarlet"
+  },
+  "output": "knightsnmages:elite_source_gem",
+  "pedestalItems": [],
+  "source": 500
+}

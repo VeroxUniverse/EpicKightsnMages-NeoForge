@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "knightsnmages:citrin_block"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "knightsnmages:citrin_gem"
+  }
+}

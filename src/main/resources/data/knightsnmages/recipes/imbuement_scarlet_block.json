@@ -1,0 +1,10 @@
+{
+  "type": "ars_nouveau:imbuement",
+  "count": 1,
+  "input": {
+    "item": "knightsnmages:scarlet_block"
+  },
+  "output": "knightsnmages:elite_source_gem_block",
+  "pedestalItems": [],
+  "source": 2000
+}

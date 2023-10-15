@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "knightsnmages:block/citrin_block"
+  }
+}
