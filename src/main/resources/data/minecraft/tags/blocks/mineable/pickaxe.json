@@ -6,6 +6,10 @@
     "knightsnmages:citrin_ore",
     "knightsnmages:deepslate_citrin_ore",
     "knightsnmages:citrin_block",
-    "knightsnmages:elite_source_gem_block"
+    "knightsnmages:elite_source_gem_block",
+    "knightsnmages:moonlight_ore",
+    "knightsnmages:deepslate_moonlight_ore",
+    "knightsnmages:moonlight_block",
+    "knightsnmages:noble_source_gem_block"
   ]
 }

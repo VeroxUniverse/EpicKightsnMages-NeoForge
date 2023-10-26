@@ -3,6 +3,7 @@ package net.veroxuniverse.knightsnmages;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -46,6 +47,7 @@ public class KnightsnMages
 
         GeckoLib.initialize();
         ItemsRegistry.register(modEventBus);
+        ItemsRegistry.registerPerks();
         BlocksRegistry.register(modEventBus);
         CreativeTabRegistry.register(modEventBus);
         //* LOOT MODIFIERS *//
@@ -54,6 +56,10 @@ public class KnightsnMages
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
+    }
+
+    public static ResourceLocation prefix(String path) {
+        return new ResourceLocation(KnightsnMages.MOD_ID, path);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

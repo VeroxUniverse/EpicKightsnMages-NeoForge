@@ -1,0 +1,10 @@
+{
+  "type": "ars_nouveau:imbuement",
+  "count": 1,
+  "input": {
+    "item": "knightsnmages:moonlight_block"
+  },
+  "output": "knightsnmages:noble_source_gem_block",
+  "pedestalItems": [],
+  "source": 2000
+}

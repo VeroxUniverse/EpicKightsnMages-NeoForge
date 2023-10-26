@@ -13,6 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.veroxuniverse.knightsnmages.KnightsnMages;
 import net.veroxuniverse.knightsnmages.block.EliteMageBloomCrop;
+import net.veroxuniverse.knightsnmages.block.NobleMageBloomCrop;
 
 import java.util.function.Supplier;
 
@@ -34,11 +35,22 @@ public class BlocksRegistry {
             () -> new Block(BlockBehaviour.Properties.copy(BlockRegistry.SOURCE_GEM_BLOCK.get())
                     .strength(4f).requiresCorrectToolForDrops().noOcclusion()));
 
+    public static final RegistryObject<Block> NOBLE_MAGEBLOOM_CROP = registerBlockWithoutBlockItem("noble_magebloom_crop",
+            () -> new NobleMageBloomCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
+
+    public static final RegistryObject<Block> NOBLE_SOURCE_GEM_BLOCK = registerBlock("noble_source_gem_block",
+            () -> new Block(BlockBehaviour.Properties.copy(BlockRegistry.SOURCE_GEM_BLOCK.get())
+                    .strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
     public static final RegistryObject<Block> SCARLET_BLOCK = registerBlock("scarlet_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)
                     .strength(4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CITRIN_BLOCK = registerBlock("citrin_block",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)
+                    .strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MOONLIGHT_BLOCK = registerBlock("moonlight_block",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)
                     .strength(4f).requiresCorrectToolForDrops()));
 
@@ -50,11 +62,19 @@ public class BlocksRegistry {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .strength(4f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> MOONLIGHT_ORE = registerBlock("moonlight_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
+                    .strength(4f).requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> DEEPSLATE_SCARLET_ORE = registerBlock("deepslate_scarlet_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .strength(4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_CITRIN_ORE = registerBlock("deepslate_citrin_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
+                    .strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> DEEPSLATE_MOONLIGHT_ORE = registerBlock("deepslate_moonlight_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .strength(4f).requiresCorrectToolForDrops()));
 

@@ -1,6 +1,7 @@
 {
   "values": [
     "#forge:ores/citrin",
-    "#forge:ores/scarlet"
+    "#forge:ores/scarlet",
+    "#forge:ores/moonlight"
   ]
 }

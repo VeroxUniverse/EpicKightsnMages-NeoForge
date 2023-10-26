@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "knightsnmages:moonlight_block"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "knightsnmages:moonlight_gem"
+  }
+}

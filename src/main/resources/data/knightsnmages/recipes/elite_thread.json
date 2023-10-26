@@ -1,0 +1,39 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "output": {
+    "item": "knightsnmages:blank_elite_thread"
+  },
+  "pedestalItems": [
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "ars_nouveau:blank_thread"
+    }
+  ],
+  "sourceCost": 500
+}

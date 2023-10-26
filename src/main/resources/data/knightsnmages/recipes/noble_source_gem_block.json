@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "x": {
+      "item": "knightsnmages:noble_source_gem"
+    }
+  },
+  "pattern": [
+    "xx",
+    "xx"
+  ],
+  "result": {
+    "item": "knightsnmages:noble_source_gem_block"
+  },
+  "show_notification": true
+}

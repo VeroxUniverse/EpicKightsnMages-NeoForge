@@ -1,0 +1,39 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "output": {
+    "item": "knightsnmages:thread_noble"
+  },
+  "pedestalItems": [
+    {
+      "item": "minecraft:iron_chestplate"
+    },
+    {
+      "item": "ars_nouveau:whirlisprig_shards"
+    },
+    {
+      "item": "ars_nouveau:whirlisprig_shards"
+    },
+    {
+      "item": "ars_nouveau:earth_essence"
+    },
+    {
+      "item": "ars_nouveau:earth_essence"
+    },
+    {
+      "item": "ars_nouveau:manipulation_essence"
+    },
+    {
+      "item": "minecraft:anvil"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "knightsnmages:blank_elite_thread"
+    }
+  ],
+  "sourceCost": 2500
+}

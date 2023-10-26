@@ -1,0 +1,39 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
+  "output": {
+    "item": "knightsnmages:elite_wand"
+  },
+  "pedestalItems": [
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "ars_nouveau:manipulation_essence"
+    },
+    {
+      "item": "ars_nouveau:air_essence"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "knightsnmages:scarlet_block"
+    }
+  ],
+  "sourceCost": 0
+}

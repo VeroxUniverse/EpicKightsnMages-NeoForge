@@ -1,0 +1,8 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "block/crop",
+  "textures": {
+    "crop": "knightsnmages:block/noble_magebloom_stage3"
+  },
+  "render_type": "cutout"
+}

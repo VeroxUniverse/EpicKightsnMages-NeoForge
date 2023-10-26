@@ -20,8 +20,8 @@
   ],
   "reagent": [
     {
-      "item": "ars_nouveauu:magebloom_crop"
+      "item": "ars_nouveau:magebloom_crop"
     }
   ],
-  "sourceCost": 0
+  "sourceCost": 2500
 }

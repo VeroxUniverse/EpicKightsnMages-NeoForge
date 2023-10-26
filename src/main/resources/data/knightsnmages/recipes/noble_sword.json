@@ -1,0 +1,30 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
+  "output": {
+    "item": "knightsnmages:noble_sword"
+  },
+  "pedestalItems": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "knightsnmages:noble_source_gem_block"
+    },
+    {
+      "item": "knightsnmages:noble_source_gem_block"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:iron_block"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "minecraft:diamond_sword"
+    }
+  ],
+  "sourceCost": 0
+}

@@ -1,0 +1,27 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "output": {
+    "item": "knightsnmages:noble_magebloom_seed"
+  },
+  "pedestalItems": [
+    {
+      "item": "knightsnmages:noble_source_gem"
+    },
+    {
+      "item": "knightsnmages:noble_source_gem"
+    },
+    {
+      "item": "knightsnmages:noble_source_gem"
+    },
+    {
+      "item": "knightsnmages:noble_source_gem"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "ars_nouveau:magebloom_crop"
+    }
+  ],
+  "sourceCost": 2500
+}

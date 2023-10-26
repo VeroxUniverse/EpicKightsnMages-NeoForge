@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "knightsnmages:noble_source_gem_block"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "knightsnmages:noble_source_gem"
+  }
+}

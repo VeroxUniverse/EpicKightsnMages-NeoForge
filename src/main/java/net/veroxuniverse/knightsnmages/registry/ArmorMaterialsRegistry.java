@@ -1,6 +1,5 @@
 package net.veroxuniverse.knightsnmages.registry;
 
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
@@ -13,7 +12,10 @@ import java.util.function.Supplier;
 public class ArmorMaterialsRegistry {
 
     public static final KNMArmorMaterial ELITE = new KNMArmorMaterial("an_elite", 38, new int[]{3, 6, 8, 3},
-            30, SoundEvents.ARMOR_EQUIP_LEATHER, 3.0f, 0.1F, () -> Ingredient.of(ItemsRegistry.MAGE_FIBER));
+            30, SoundEvents.ARMOR_EQUIP_LEATHER, 3.0f, 0.1F, () -> Ingredient.of(ItemsRegistry.ELITE_MAGEBLOOM_FIBER.get()));
+
+    public static final KNMArmorMaterial NOBLE = new KNMArmorMaterial("an_noble", 38, new int[]{3, 6, 8, 3},
+            30, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0f, 0F, () -> Ingredient.of(ItemsRegistry.NOBLE_MAGEBLOOM_FIBER.get()));
 
     public static class KNMArmorMaterial implements ArmorMaterial {
 

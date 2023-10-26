@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "knightsnmages:item/thread_noble_elite"
+  }
+}

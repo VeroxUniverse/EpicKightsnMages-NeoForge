@@ -1,0 +1,27 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
+  "output": {
+    "item": "knightsnmages:blue_knight_boots"
+  },
+  "pedestalItems": [
+    {
+      "item": "knightsnmages:noble_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:noble_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:noble_magebloom_fiber"
+    },
+    {
+      "item": "knightsnmages:noble_magebloom_fiber"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "minecraft:diamond_boots"
+    }
+  ],
+  "sourceCost": 0
+}
