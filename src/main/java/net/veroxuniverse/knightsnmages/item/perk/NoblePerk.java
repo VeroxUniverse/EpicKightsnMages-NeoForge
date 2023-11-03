@@ -49,14 +49,14 @@ public class NoblePerk extends Perk implements IEffectResolvePerk {
         if (effect instanceof IDamageEffect damageEffect && rayTraceResult instanceof EntityHitResult entityHitResult && entityHitResult.getEntity() instanceof LivingEntity livingEntity && livingEntity != shooter) {
             if (damageEffect.canDamage(livingEntity, spellStats, spellContext, resolver, entityHitResult.getEntity())) {
                 int value = perkInstance.getSlot().value;
-                livingEntity.addEffect(new MobEffectInstance(value < 3 ? MobEffects.MOVEMENT_SLOWDOWN : MobEffects.WEAKNESS, value * 5 * 20, value < 3 ? value : 1));
+                //livingEntity.addEffect(new MobEffectInstance(value < 3 ? MobEffects.MOVEMENT_SLOWDOWN : MobEffects.WEAKNESS, value * 5 * 20, value < 3 ? value : 1));
             }
         }
     }
 
     @Override
     public Multimap<Attribute, AttributeModifier> getModifiers(EquipmentSlot pEquipmentSlot, ItemStack stack, int slotValue) {
-        return attributeBuilder().put(Attributes.ARMOR, new AttributeModifier(PERK_UUID, "NoblePerk", 2, AttributeModifier.Operation.ADDITION)).build();
+        return attributeBuilder().put(Attributes.ARMOR, new AttributeModifier(PERK_UUID, "NoblePerk", 4, AttributeModifier.Operation.ADDITION)).build();
         //return attributeBuilder().put(PerkAttributes.MAX_MANA.get(), new AttributeModifier(PERK_UUID, "max_mana_armor", 500.0F , AttributeModifier.Operation.ADDITION)).build();
     }
 
