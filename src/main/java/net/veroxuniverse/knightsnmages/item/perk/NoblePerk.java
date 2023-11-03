@@ -1,10 +1,7 @@
 package net.veroxuniverse.knightsnmages.item.perk;
 
 import com.google.common.collect.Multimap;
-import com.hollingsworth.arsnouveau.api.perk.IEffectResolvePerk;
-import com.hollingsworth.arsnouveau.api.perk.Perk;
-import com.hollingsworth.arsnouveau.api.perk.PerkInstance;
-import com.hollingsworth.arsnouveau.api.perk.PerkSlot;
+import com.hollingsworth.arsnouveau.api.perk.*;
 import com.hollingsworth.arsnouveau.api.spell.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -60,6 +57,7 @@ public class NoblePerk extends Perk implements IEffectResolvePerk {
     @Override
     public Multimap<Attribute, AttributeModifier> getModifiers(EquipmentSlot pEquipmentSlot, ItemStack stack, int slotValue) {
         return attributeBuilder().put(Attributes.ARMOR, new AttributeModifier(PERK_UUID, "NoblePerk", 2, AttributeModifier.Operation.ADDITION)).build();
+        //return attributeBuilder().put(PerkAttributes.MAX_MANA.get(), new AttributeModifier(PERK_UUID, "max_mana_armor", 500.0F , AttributeModifier.Operation.ADDITION)).build();
     }
 
     @Override

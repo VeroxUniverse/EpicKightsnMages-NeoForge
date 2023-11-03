@@ -92,14 +92,14 @@ dependencies {
     implementation fg.deobf("com.hollingsworth.ars_nouveau:ars_nouveau-${minecraft_version}:${ars_version}")
     implementation("com.github.llamalad7.mixinextras:mixinextras-forge:${mixinextras_version}")
 
-    runtimeOnly fg.deobf("curse.maven:better-combat-by-daedelus-639842:${bettercombat_version}-forge")
-    runtimeOnly fg.deobf("curse.maven:cloth-config-348521:${cloth_version}-forge")
-    runtimeOnly fg.deobf("curse.maven:playeranimator-658587:${playeranimator_version}-forge")
+    //runtimeOnly fg.deobf("curse.maven:better-combat-by-daedelus-639842:${bettercombat_version}-forge")
+    //runtimeOnly fg.deobf("curse.maven:cloth-config-348521:${cloth_version}-forge")
+    //runtimeOnly fg.deobf("curse.maven:playeranimator-658587:${playeranimator_version}-forge")
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curio_version}")
 
     //compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     //runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
-    //implementation fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
+    implementation fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
 
     // compile against the JEI API but do not include it at runtime
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))

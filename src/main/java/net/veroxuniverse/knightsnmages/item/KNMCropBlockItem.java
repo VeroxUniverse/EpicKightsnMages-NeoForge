@@ -1,6 +1,5 @@
 package net.veroxuniverse.knightsnmages.item;
 
-import com.hollingsworth.arsnouveau.common.items.ModItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.ItemStack;
