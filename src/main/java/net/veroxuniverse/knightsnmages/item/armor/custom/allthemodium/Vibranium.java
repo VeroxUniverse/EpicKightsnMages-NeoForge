@@ -1,4 +1,4 @@
-package net.veroxuniverse.knightsnmages.item.armor.custom;
+package net.veroxuniverse.knightsnmages.item.armor.custom.allthemodium;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
@@ -23,10 +23,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.veroxuniverse.knightsnmages.KnightsnMages;
+import net.veroxuniverse.knightsnmages.compat.ATMCompat;
 import net.veroxuniverse.knightsnmages.item.armor.KNMArmorItem;
-import net.veroxuniverse.knightsnmages.item.armor.client.renderer.BlueKnightRenderer;
-import net.veroxuniverse.knightsnmages.item.armor.client.renderer.EliteBattleMageRenderer;
-import net.veroxuniverse.knightsnmages.registry.ItemsRegistry;
+import net.veroxuniverse.knightsnmages.item.armor.client.renderer.VibraniumRenderer;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -41,27 +40,55 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.function.Consumer;
 
-public class BlueKnight extends KNMArmorItem {
-    public BlueKnight(ArmorMaterial materialIn, Type slot, Properties builder, GeoModel<AnimatedMagicArmor> model) {
+public class Vibranium extends KNMArmorItem {
+    public Vibranium(ArmorMaterial materialIn, Type slot, Properties builder, GeoModel<AnimatedMagicArmor> model) {
         super(materialIn, slot, builder, model);
     }
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
             consumer.accept(new IClientItemExtensions() {
-                private BlueKnightRenderer renderer;
+                private VibraniumRenderer renderer;
 
                 @Override
                 public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
                                                                        EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
                     if (this.renderer == null)
-                        this.renderer = new BlueKnightRenderer();
+                        this.renderer = new VibraniumRenderer();
 
                     this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                     return this.renderer;
                 }
             });
 
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, 20, state -> {
+            state.setAnimation(RawAnimation.begin().then("animation.mage.idle", Animation.LoopType.LOOP));
+
+            Entity entity = state.getData(DataTickets.ENTITY);
+
+            if (entity instanceof ArmorStand)
+                return PlayState.CONTINUE;
+
+            Set<Item> wornArmor = new ObjectOpenHashSet<>();
+
+            for (ItemStack stack : entity.getArmorSlots()) {
+                if (stack.isEmpty())
+                    return PlayState.STOP;
+
+                wornArmor.add(stack.getItem());
+            }
+            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
+                    ATMCompat.MAGE_VIBRANIUM_HELMET.get(),
+                    ATMCompat.MAGE_VIBRANIUM_CHESTPLATE.get(),
+                    ATMCompat.MAGE_VIBRANIUM_LEGGINGS.get(),
+                    ATMCompat.MAGE_VIBRANIUM_BOOTS.get()));
+
+            return isFullSet ? PlayState.CONTINUE : PlayState.STOP;
+        }));
     }
 
     @Override
@@ -72,7 +99,7 @@ public class BlueKnight extends KNMArmorItem {
             UUID uuid = ARMOR_MODIFIER_UUID_PER_TYPE.get(type);
             IPerkHolder<ItemStack> perkHolder = PerkUtil.getPerkHolder(stack);
             if (perkHolder != null) {
-                attributes.put(PerkAttributes.MAX_MANA.get(), new AttributeModifier(uuid, "max_mana_armor", 30 * (perkHolder.getTier() + 1), AttributeModifier.Operation.ADDITION));
+                attributes.put(PerkAttributes.MAX_MANA.get(), new AttributeModifier(uuid, "max_mana_armor", 80 * (perkHolder.getTier() + 1), AttributeModifier.Operation.ADDITION));
                 attributes.put(PerkAttributes.MANA_REGEN_BONUS.get(), new AttributeModifier(uuid, "mana_regen_armor", perkHolder.getTier() + 2, AttributeModifier.Operation.ADDITION));
                 for (PerkInstance perkInstance : perkHolder.getPerkInstances()) {
                     IPerk perk = perkInstance.getPerk();
@@ -86,8 +113,7 @@ public class BlueKnight extends KNMArmorItem {
 
     @Override
     public @Nullable String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        //return new ResourceLocation(KnightsnMages.MOD_ID, "textures/models/armor/ars_nouveau/elite_mage_armor_textures_" + this.getColor(stack) + ".png").toString();
-        return new ResourceLocation(KnightsnMages.MOD_ID, "textures/armor/blue_knight_armor_textures_eyes.png").toString();
+        return new ResourceLocation(KnightsnMages.MOD_ID, "textures/armor/mage_vibranium2.png").toString();
     }
 
 }

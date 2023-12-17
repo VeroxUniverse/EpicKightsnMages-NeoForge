@@ -100,8 +100,8 @@ public class EliteBattleMage extends KNMArmorItem {
             UUID uuid = ARMOR_MODIFIER_UUID_PER_TYPE.get(type);
             IPerkHolder<ItemStack> perkHolder = PerkUtil.getPerkHolder(stack);
             if (perkHolder != null) {
-                attributes.put(PerkAttributes.MAX_MANA.get(), new AttributeModifier(uuid, "max_mana_armor", 100 * (perkHolder.getTier() + 1), AttributeModifier.Operation.ADDITION));
-                attributes.put(PerkAttributes.MANA_REGEN_BONUS.get(), new AttributeModifier(uuid, "mana_regen_armor", perkHolder.getTier() + 3, AttributeModifier.Operation.ADDITION));
+                attributes.put(PerkAttributes.MAX_MANA.get(), new AttributeModifier(uuid, "max_mana_armor", 40 * (perkHolder.getTier() + 1), AttributeModifier.Operation.ADDITION));
+                attributes.put(PerkAttributes.MANA_REGEN_BONUS.get(), new AttributeModifier(uuid, "mana_regen_armor", perkHolder.getTier() + 2, AttributeModifier.Operation.ADDITION));
                 for (PerkInstance perkInstance : perkHolder.getPerkInstances()) {
                     IPerk perk = perkInstance.getPerk();
                     attributes.putAll(perk.getModifiers(this.type.getSlot(), stack, perkInstance.getSlot().value));

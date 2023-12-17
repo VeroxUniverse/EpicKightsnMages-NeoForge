@@ -19,6 +19,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -28,6 +29,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.veroxuniverse.knightsnmages.compat.ATMCompat;
 import net.veroxuniverse.knightsnmages.registry.BlocksRegistry;
 import net.veroxuniverse.knightsnmages.registry.CreativeTabRegistry;
 import net.veroxuniverse.knightsnmages.registry.ItemsRegistry;
@@ -53,6 +55,10 @@ public class KnightsnMages
         //* LOOT MODIFIERS *//
         //ModLootModifiers.register(modEventBus);
 
+        if(ModList.get().isLoaded("allthemodium")) {
+            ATMCompat.register(modEventBus);
+        }
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -66,6 +72,10 @@ public class KnightsnMages
     {
         LOGGER.info("HELLO FROM COMMON SETUP");
         ItemsRegistry.registerPerkProviders();
+
+        if(ModList.get().isLoaded("allthemodium")) {
+            ATMCompat.registerPerkProviders();
+        }
     }
 
 

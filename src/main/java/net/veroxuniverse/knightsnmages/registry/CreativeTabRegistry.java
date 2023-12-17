@@ -6,9 +6,12 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.veroxuniverse.knightsnmages.KnightsnMages;
+import net.veroxuniverse.knightsnmages.compat.ATMCompat;
+import net.veroxuniverse.knightsnmages.item.armor.KNMArmorItem;
 
 public class CreativeTabRegistry {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KnightsnMages.MOD_ID);
@@ -22,6 +25,11 @@ public class CreativeTabRegistry {
                     .displayItems((displayParameters, output) -> {
                         for (RegistryObject<Item> item : ItemsRegistry.ITEMS.getEntries())
                             output.accept(item.get());
+
+                        if (ModList.get().isLoaded("allthemodium"))
+                            for (RegistryObject<Item> item : ATMCompat.ITEMS_ATM.getEntries())
+                                if (item.get() instanceof KNMArmorItem)
+                                    output.accept(item.get());
                     })
                     .build()
     );

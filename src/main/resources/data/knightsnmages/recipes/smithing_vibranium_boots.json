@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "allthemodium"
+        }
+      ],
+      "recipe": {
+        "type": "ars_nouveau:enchanting_apparatus",
+        "keepNbtOfReagent": true,
+        "output": {
+          "item": "knightsnmages:mage_vibranium_boots"
+        },
+        "pedestalItems": [
+          {
+            "item": "allthemodium:vibranium_ingot"
+          },
+          {
+            "item": "allthemodium:vibranium_upgrade_smithing_template"
+          },
+          {
+            "item": "knightsnmages:elite_magebloom_fiber"
+          },
+          {
+            "item": "knightsnmages:elite_magebloom_fiber"
+          }
+        ],
+        "reagent": [
+          {
+            "item": "knightsnmages:mage_allthemodium_boots"
+          }
+        ],
+        "sourceCost": 6000
+      }
+    }
+  ]
+}

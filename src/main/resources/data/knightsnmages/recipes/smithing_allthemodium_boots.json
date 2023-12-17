@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "allthemodium"
+        }
+      ],
+      "recipe": {
+        "type": "ars_nouveau:enchanting_apparatus",
+        "keepNbtOfReagent": true,
+        "output": {
+          "item": "knightsnmages:mage_allthemodium_boots"
+        },
+        "pedestalItems": [
+          {
+            "item": "allthemodium:allthemodium_ingot"
+          },
+          {
+            "item": "allthemodium:allthemodium_upgrade_smithing_template"
+          },
+          {
+            "item": "knightsnmages:elite_magebloom_fiber"
+          },
+          {
+            "item": "knightsnmages:elite_magebloom_fiber"
+          }
+        ],
+        "reagent": [
+          {
+            "item": "knightsnmages:elite_mage_boots"
+          }
+        ],
+        "sourceCost": 5000
+      }
+    }
+  ]
+}

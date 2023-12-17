@@ -123,23 +123,32 @@ dependencies {
 
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
     implementation("com.github.llamalad7.mixinextras:mixinextras-forge:${mixinextras_version}")
-
     compileOnly fg.deobf("com.github.glitchfiend:TerraBlender-forge:1.19-2.0.0.120")
+
+    // Better Combat
 
     runtimeOnly fg.deobf("curse.maven:better-combat-by-daedelus-639842:${bettercombat_version}-forge")
     runtimeOnly fg.deobf("curse.maven:cloth-config-348521:${cloth_version}-forge")
     runtimeOnly fg.deobf("curse.maven:playeranimator-658587:${playeranimator_version}-forge")
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curio_version}")
 
+    // Patchouli
+
     //compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     //runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
     implementation fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
 
-    // compile against the JEI API but do not include it at runtime
+    // JEI
+
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
-    // at runtime, use the full JEI jar for Forge
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+
+
+    // Allthemodium
+
+    implementation fg.deobf("curse.maven:allthemodium-364466:4892369")
+    implementation fg.deobf("curse.maven:ato-405593:4844097")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 

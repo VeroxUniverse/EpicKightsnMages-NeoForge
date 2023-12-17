@@ -8,6 +8,7 @@ import com.hollingsworth.arsnouveau.common.items.ModItem;
 import com.hollingsworth.arsnouveau.setup.registry.APIRegistry;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -69,24 +70,24 @@ public class ItemsRegistry {
 
     public static GeoModel<AnimatedMagicArmor> model;
     public static final RegistryObject<Item> ELITE_MAGE_HELMET = ITEMS.register("elite_mage_helmet",
-            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.HELMET, new Item.Properties(), model));
+            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
     public static final RegistryObject<Item> ELITE_MAGE_CHESTPLATE = ITEMS.register("elite_mage_chestplate",
-            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.CHESTPLATE, new Item.Properties(), model));
+            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
 
     public static final RegistryObject<Item> ELITE_MAGE_LEGGINGS = ITEMS.register("elite_mage_leggings",
-            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.LEGGINGS, new Item.Properties(), model));
+            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.LEGGINGS, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
     public static final RegistryObject<Item> ELITE_MAGE_BOOTS = ITEMS.register("elite_mage_boots",
-            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.BOOTS, new Item.Properties(), model));
+            () -> new EliteBattleMage(ArmorMaterialsRegistry.ELITE, ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
 
     public static final RegistryObject<Item> BLUE_KNIGHT_HELMET = ITEMS.register("blue_knight_helmet",
-            () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.HELMET, new Item.Properties(), model));
+            () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
     public static final RegistryObject<Item> BLUE_KNIGHT_CHESTPLATE = ITEMS.register("blue_knight_chestplate",
-            () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.CHESTPLATE, new Item.Properties(), model));
+            () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
 
     public static final RegistryObject<Item> BLUE_KNIGHT_LEGGINGS = ITEMS.register("blue_knight_leggings",
-            () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.LEGGINGS, new Item.Properties(), model));
+            () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.LEGGINGS, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
     public static final RegistryObject<Item> BLUE_KNIGHT_BOOTS = ITEMS.register("blue_knight_boots",
-            () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.BOOTS, new Item.Properties(), model));
+            () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
 
     //* WEAPONS *//
 
