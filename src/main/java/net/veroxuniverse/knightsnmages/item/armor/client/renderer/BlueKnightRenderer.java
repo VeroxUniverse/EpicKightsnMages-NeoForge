@@ -11,15 +11,4 @@ public class BlueKnightRenderer extends GeoArmorRenderer<BlueKnight> {
         super(new BlueKnightModel());
     }
 
-    /*
-
-    @Override
-    public ResourceLocation getTextureLocation(EliteBattleMage instance) {
-
-        return new ResourceLocation(KnightsnMages.MOD_ID, "textures/models/armor/ars_nouveau/elite_mage_armor_textures" + instance.getColor(getCurrentStack()) + ".png");
-    }
-
-     */
-
-
 }

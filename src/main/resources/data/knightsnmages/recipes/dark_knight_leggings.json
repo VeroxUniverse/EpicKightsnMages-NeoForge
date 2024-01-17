@@ -1,0 +1,39 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
+  "output": {
+    "item": "knightsnmages:dark_knight_leggings"
+  },
+  "pedestalItems": [
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "ars_nouveau:wilden_tribute"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "ars_nouveau:earth_essence"
+    },
+    {
+      "item": "knightsnmages:elite_magebloom_fiber"
+    },
+    {
+      "item": "ars_nouveau:manipulation_essence"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "minecraft:netherite_leggings"
+    }
+  ],
+  "sourceCost": 8000
+}

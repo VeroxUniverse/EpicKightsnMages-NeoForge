@@ -16,9 +16,11 @@ import net.minecraftforge.registries.RegistryObject;
 import net.veroxuniverse.knightsnmages.KnightsnMages;
 import net.veroxuniverse.knightsnmages.item.KNMCropBlockItem;
 import net.veroxuniverse.knightsnmages.item.armor.custom.BlueKnight;
+import net.veroxuniverse.knightsnmages.item.armor.custom.DarkKnight;
 import net.veroxuniverse.knightsnmages.item.armor.custom.EliteBattleMage;
 import net.veroxuniverse.knightsnmages.item.perk.BlankElitePerkItem;
 import net.veroxuniverse.knightsnmages.item.perk.NoblePerk;
+import net.veroxuniverse.knightsnmages.item.weapon.KNMBookItem;
 import net.veroxuniverse.knightsnmages.item.weapon.KNMSwordItem;
 import net.veroxuniverse.knightsnmages.item.weapon.KNMWandItem;
 import software.bernie.geckolib.model.GeoModel;
@@ -89,13 +91,29 @@ public class ItemsRegistry {
     public static final RegistryObject<Item> BLUE_KNIGHT_BOOTS = ITEMS.register("blue_knight_boots",
             () -> new BlueKnight(ArmorMaterialsRegistry.NOBLE, ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
 
+    public static final RegistryObject<Item> DARK_KNIGHT_HELMET = ITEMS.register("dark_knight_helmet",
+            () -> new DarkKnight(ArmorMaterialsRegistry.DARK, ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
+    public static final RegistryObject<Item> DARK_KNIGHT_CHESTPLATE = ITEMS.register("dark_knight_chestplate",
+            () -> new DarkKnight(ArmorMaterialsRegistry.DARK, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
+
+    public static final RegistryObject<Item> DARK_KNIGHT_LEGGINGS = ITEMS.register("dark_knight_leggings",
+            () -> new DarkKnight(ArmorMaterialsRegistry.DARK, ArmorItem.Type.LEGGINGS, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
+    public static final RegistryObject<Item> DARK_KNIGHT_BOOTS = ITEMS.register("dark_knight_boots",
+            () -> new DarkKnight(ArmorMaterialsRegistry.DARK, ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.RARE).fireResistant(), model));
+
     //* WEAPONS *//
 
     public static final RegistryObject<Item> ELITE_WAND = ITEMS.register("elite_wand",
             () -> new KNMWandItem(ItemMaterialsRegistry.NOBLE,5, -3.0f));
 
+    public static final RegistryObject<Item> ELITE_SPELL_BOOK = ITEMS.register("elite_spell_book",
+            () -> new KNMBookItem(ItemMaterialsRegistry.NOBLE,1, -3.0f));
+
     public static final RegistryObject<Item> NOBLE_SWORD = ITEMS.register("noble_sword",
             () -> new KNMSwordItem(ItemMaterialsRegistry.NOBLE,8, -2.4f));
+
+    public static final RegistryObject<Item> DARK_SWORD = ITEMS.register("dark_sword",
+            () -> new KNMSwordItem(ItemMaterialsRegistry.NOBLE,11, -2.8f));
 
     //* PERK PROVIDERS *//
 
@@ -116,6 +134,27 @@ public class ItemsRegistry {
                 Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.THREE)
         )));
         PerkRegistry.registerPerkProvider(ELITE_MAGE_BOOTS.get(), stack -> new ArmorPerkHolder(stack, Arrays.asList(
+                List.of(PerkSlot.ONE),
+                Arrays.asList(PerkSlot.ONE, PerkSlot.ONE),
+                Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.TWO)
+        )));
+
+        PerkRegistry.registerPerkProvider(DARK_KNIGHT_HELMET.get(), stack -> new ArmorPerkHolder(stack, Arrays.asList(
+                List.of(PerkSlot.ONE),
+                Arrays.asList(PerkSlot.ONE, PerkSlot.ONE),
+                Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.TWO)
+        )));
+        PerkRegistry.registerPerkProvider(DARK_KNIGHT_CHESTPLATE.get(), stack -> new ArmorPerkHolder(stack, Arrays.asList(
+                List.of(PerkSlot.ONE),
+                Arrays.asList(PerkSlot.ONE, PerkSlot.TWO),
+                Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.THREE)
+        )));
+        PerkRegistry.registerPerkProvider(DARK_KNIGHT_LEGGINGS.get(), stack -> new ArmorPerkHolder(stack, Arrays.asList(
+                List.of(PerkSlot.ONE),
+                Arrays.asList(PerkSlot.ONE, PerkSlot.TWO),
+                Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.THREE)
+        )));
+        PerkRegistry.registerPerkProvider(DARK_KNIGHT_BOOTS.get(), stack -> new ArmorPerkHolder(stack, Arrays.asList(
                 List.of(PerkSlot.ONE),
                 Arrays.asList(PerkSlot.ONE, PerkSlot.ONE),
                 Arrays.asList(PerkSlot.ONE, PerkSlot.TWO, PerkSlot.TWO)

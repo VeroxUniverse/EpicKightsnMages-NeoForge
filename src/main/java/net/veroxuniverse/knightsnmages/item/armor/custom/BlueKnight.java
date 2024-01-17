@@ -86,7 +86,6 @@ public class BlueKnight extends KNMArmorItem {
 
     @Override
     public @Nullable String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        //return new ResourceLocation(KnightsnMages.MOD_ID, "textures/models/armor/ars_nouveau/elite_mage_armor_textures_" + this.getColor(stack) + ".png").toString();
         return new ResourceLocation(KnightsnMages.MOD_ID, "textures/armor/blue_knight_armor_textures_eyes.png").toString();
     }
 

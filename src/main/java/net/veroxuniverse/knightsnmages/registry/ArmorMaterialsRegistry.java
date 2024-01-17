@@ -17,6 +17,9 @@ public class ArmorMaterialsRegistry {
     public static final KNMArmorMaterial NOBLE = new KNMArmorMaterial("an_noble", 38, new int[]{3, 6, 8, 3},
             30, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0f, 0F, () -> Ingredient.of(ItemsRegistry.NOBLE_MAGEBLOOM_FIBER.get()));
 
+    public static final KNMArmorMaterial DARK = new KNMArmorMaterial("an_dark", 45, new int[]{5, 8, 10, 5},
+            30, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.15F, () -> Ingredient.of(ItemsRegistry.ELITE_MAGEBLOOM_FIBER.get()));
+
     public static class KNMArmorMaterial implements ArmorMaterial {
 
         private static final int[] Max_Damage_Array = new int[]{13, 15, 16, 11};

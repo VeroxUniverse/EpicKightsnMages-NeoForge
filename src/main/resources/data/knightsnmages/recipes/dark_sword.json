@@ -1,0 +1,30 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": true,
+  "output": {
+    "item": "knightsnmages:dark_sword"
+  },
+  "pedestalItems": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem_block"
+    },
+    {
+      "item": "knightsnmages:elite_source_gem_block"
+    },
+    {
+      "item": "minecraft:iron_block"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "minecraft:netherite_sword"
+    }
+  ],
+  "sourceCost": 6000
+}
